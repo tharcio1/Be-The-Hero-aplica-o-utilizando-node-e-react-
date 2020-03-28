@@ -1,5 +1,6 @@
 const express = require('express'); //importamos o framework/modulo express para dentro da variavel express
 const cors = require('cors');
+const { errors } = require('celebrate');
 const routes = require('./routes');//importamos as rotas da classe routes para dentro da variavel routes
 
 const app = express(); //criamos a variavel que vai conter a aplicação
@@ -11,8 +12,11 @@ app.use(express.json());//informamos a aplicação que estaremos utilizando o js
 app.use(routes);// imformamos a aplicação que estaremos utilizando as rotas da classe routes
 //o app.use(routes) deve vir depois do app.use(express.json())
 
+app.use(errors());
 
-app.listen(3333); //estamos dizendo que a aplicação vai ouvir na porta 3333
+module.exports = app;
+
+//app.listen(3333); //estamos dizendo que a aplicação vai ouvir na porta 3333
 
 //app.get('/contato'); //criamos uma rota chamada 
 

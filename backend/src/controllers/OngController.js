@@ -1,5 +1,5 @@
 const connection = require('../database/connection');
-const crypto = require('crypto');
+const generateUniqueid = require('../utils/generateUniqueid'); 
 
 module.exports = {
     //não tem problema criar rotas para o mesmo caminho desde que elas estejam usando metodos diferentes
@@ -22,7 +22,7 @@ module.exports = {
 
         const {name, email, whatsapp, city, uf} = request.body;
 
-        const id = crypto.randomBytes(4).toString('HEX');
+        const id = generateUniqueid();
 
         await connection('ongs').insert({
             id,
