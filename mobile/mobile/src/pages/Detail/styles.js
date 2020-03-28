@@ -10,9 +10,8 @@ export default StyleSheet.create({
 
     header: {
         flexDirection: 'row',
-        justifyContent: 'space-betwen',
-        alignItems: 'center',
-
+        justifyContent: 'space-between',
+        alignItems: 'center'
     },
 
     incident: {
@@ -51,7 +50,7 @@ export default StyleSheet.create({
     },  
 
     heroDescription: {
-        fonteSize:15,
+        fontSize:15,
         color: '#737380',
         marginTop: 16,
     },

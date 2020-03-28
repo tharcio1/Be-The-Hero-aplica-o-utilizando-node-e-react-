@@ -5,7 +5,7 @@ import React from 'react';
 
 const AppStack = createStackNavigator();
 
-import Incidents from './pages/Incidents';
+import Incidents from './pages/incidents';
 import Detail from './pages/Detail';
 
 export default function Routes(){

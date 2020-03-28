@@ -9,8 +9,9 @@ import logoImg from '../../assets/logo.png';
 import styles from './styles';
 
 export default function Detail(){
+    const routes = useRoute();
     const navigation = useNavigation();
-    const incident = route.params.incident;
+    const incident = routes.params.incident;
     const message = `Ola ${incident.name}, estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL' }).format(incident.value)}`;
 
     function navigateBack(){
